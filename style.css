@@ -1,0 +1,174 @@
+* {margin: 0; padding: 0;}
+
+body {
+    margin: 0;
+    font-family: '8-bit-wonder';
+    height: 100vh;
+}
+@font-face {
+    font-family: '8-bit-wonder';
+    src: url("./assets/fonts/8-BIT\ WONDER.TTF");
+}
+
+@font-face {
+    font-family: 'upheaval';
+    src: url("./assets/fonts/upheavtt.ttf");
+}
+
+header {
+    height: 15%;
+    background-color: #24A9BC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'upheaval';
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+#content h2 {
+    margin: 50px 100px;
+    z-index: 1;
+    font-family: '8-bit-wonder';
+    font-weight: normal;
+    color: white;
+}
+
+#content {
+    position: relative;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #212121;
+}
+
+#content::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("./assets/flappy-bird-pattern.png");
+    background-size: cover;
+    filter: saturate(0);
+    /* filter: invert(); */
+    opacity: .03;
+    z-index: 1;
+}
+
+.levels-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px;
+    z-index: 2;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 225px;
+    width: 275px;
+    position: relative;
+    cursor: pointer;
+    transition: all ease-out .2s;
+}
+
+.level h3 {
+    position: relative;
+}
+
+.level:hover {
+    transform: scale(1.025);
+}
+
+#history {
+    background-color: #FAE100;
+}
+
+.level::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url("https://img.freepik.com/vector-gratis/textura-patron-camuflaje-fondo-tonos-gris-pixel_1017-30109.jpg?size=626&ext=jpg&ga=GA1.2.938491065.1623110400");
+    position: absolute;
+    
+}
+
+#history::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("https://blacklabellogic.files.wordpress.com/2017/01/history.png");
+    border-radius: 10px;
+    opacity: 0;
+    filter: brightness(2);
+    filter: saturate(0);
+    pointer-events: none;
+    transition: all ease-out .5s;
+}
+
+#history:hover::before {
+    opacity: .2;
+}
+
+#geography {
+    background-color: #900DFF;
+}
+
+#geography::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 0;
+    filter: brightness(2);
+    filter: saturate(0);
+    pointer-events: none;
+    transition: all ease-out .5s;
+}
+
+#geography:hover::before {
+    opacity: .25;
+}
+
+#cambalach {
+    background-color: #FF0181;
+}
+
+#cambalach::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMVUHHvOsGAoXv3rP1mn-25cIO2wJiIXvZeQ&usqp=CAU");
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 0;
+    filter: brightness(2);
+    filter: saturate(0);
+    pointer-events: none;
+    transition: all ease-out .5s;
+}
+
+#cambalach:hover::before {
+    opacity: .25;
+}
+
+footer {
+    position: relative;
+    background-color: #24A9BC;
+    text-align: center;
+    height: 5%;
+}
+
